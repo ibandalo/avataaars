@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { uniqueId } from 'lodash'
 
 import Accessories from './top/accessories'
 import Clothe from './clothes'
@@ -17,8 +18,11 @@ export interface Props {
 }
 
 export default class Avatar extends React.Component<Props> {
-  render () {
+  private uniqueId = uniqueId('react-unique-')
+
+  render() {
     const { avatarStyle } = this.props
+    const { uniqueId } = this;
     const circle = avatarStyle === AvatarStyle.Circle
     return (
       <svg
@@ -31,7 +35,7 @@ export default class Avatar extends React.Component<Props> {
         xmlnsXlink='http://www.w3.org/1999/xlink'>
         <desc>Created with getavataaars.com</desc>
         <defs>
-          <circle id='path-1' cx='120' cy='120' r='120' />
+          <circle id={`${uniqueId}_path-1`} cx='120' cy='120' r='120' />
           <path
             d='M12,160 C12,226.27417 65.72583,280 132,280 C198.27417,280 252,226.27417 252,160 L264,160 L264,-1.42108547e-14 L-3.19744231e-14,-1.42108547e-14 L-3.19744231e-14,160 L12,160 Z'
             id='path-3'
@@ -42,23 +46,23 @@ export default class Avatar extends React.Component<Props> {
           />
         </defs>
         <g
-          id='Avataaar'
+          id={`${uniqueId}_Avataaar`}
           stroke='none'
           strokeWidth='1'
           fill='none'
           fillRule='evenodd'>
           <g
             transform='translate(-825.000000, -1100.000000)'
-            id='Avataaar/Circle'>
+            id={`${uniqueId}_Avataaar/Circle`}>
             <g transform='translate(825.000000, 1100.000000)'>
               {circle ? (
                 <g
-                  id='Circle'
+                  id={`${uniqueId}_Circle`}
                   strokeWidth='1'
                   fillRule='evenodd'
                   transform='translate(12.000000, 40.000000)'>
-                  <mask id='mask-2' fill='white'>
-                    <use xlinkHref='#path-1' />
+                  <mask id={`${uniqueId}_mask-2`} fill='white'>
+                    <use xlinkHref={`#${uniqueId}_path-1`} />
                   </mask>
                   <use
                     id='Circle-Background'
@@ -66,16 +70,16 @@ export default class Avatar extends React.Component<Props> {
                     xlinkHref='#path-1'
                   />
                   <g
-                    id='Color/Palette/Blue-01'
-                    mask='url(#mask-2)'
+                    id={`${uniqueId}_Color/Palette/Blue-01`}
+                    mask={`url(#${uniqueId}_mask-2)`}
                     fill='#65C9FF'>
                     <rect id='🖍Color' x='0' y='0' width='240' height='240' />
                   </g>
                 </g>
               ) : null}
               {circle ? (
-                <mask id='mask-4' fill='white'>
-                  <use xlinkHref='#path-3' />
+                <mask id={`${uniqueId}_mask-4`} fill='white'>
+                  <use xlinkHref={`#${uniqueId}_path-3`} />
                 </mask>
               ) : null}
               <g id='Mask' />
@@ -83,19 +87,19 @@ export default class Avatar extends React.Component<Props> {
                 id='Avataaar'
                 strokeWidth='1'
                 fillRule='evenodd'
-                mask='url(#mask-4)'>
+                mask={`url(#${uniqueId}_mask-4)`}>
                 <g id='Body' transform='translate(32.000000, 36.000000)'>
-                  <mask id='mask-6' fill='white'>
-                    <use xlinkHref='#path-5' />
+                  <mask id={`${uniqueId}_mask-6`} fill='white'>
+                    <use xlinkHref={`#${uniqueId}_path-5`} />
                   </mask>
-                  <use fill='#D0C6AC' xlinkHref='#path-5' />
-                  <Skin maskID='mask-6' />
+                  <use fill='#D0C6AC' xlinkHref={`#${uniqueId}_path-5`} />
+                  <Skin maskID={`${uniqueId}_mask-6`} />
                   <path
                     d='M156,79 L156,102 C156,132.927946 130.927946,158 100,158 C69.072054,158 44,132.927946 44,102 L44,79 L44,94 C44,124.927946 69.072054,150 100,150 C130.927946,150 156,124.927946 156,94 L156,79 Z'
                     id='Neck-Shadow'
                     fillOpacity='0.100000001'
                     fill='#000000'
-                    mask='url(#mask-6)'
+                    mask={`url(#${uniqueId}_mask-6)`}
                   />
                 </g>
                 <Clothe />
