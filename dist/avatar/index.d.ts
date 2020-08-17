@@ -8,5 +8,6 @@ export interface Props {
     style?: React.CSSProperties;
 }
 export default class Avatar extends React.Component<Props> {
+    private uniqueId;
     render(): JSX.Element;
 }
