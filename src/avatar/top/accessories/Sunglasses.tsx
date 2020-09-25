@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 export default class Sunglasses extends React.Component {
   static optionValue = 'Sunglasses'
@@ -10,7 +10,7 @@ export default class Sunglasses extends React.Component {
   private linearGradient1 = uniqueId('react-linear-gradient-')
   private linearGradient2 = uniqueId('react-linear-gradient-')
 
-  render () {
+  render() {
     const { path1, path2, filter1, linearGradient1, linearGradient2 } = this
     return (
       <g

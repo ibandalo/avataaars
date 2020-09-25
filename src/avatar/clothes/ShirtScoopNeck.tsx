@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 import Colors from './Colors'
 
@@ -8,7 +8,7 @@ export default class ShirtScoopNeck extends React.Component {
   private path1 = uniqueId('react-path-')
   private mask1 = uniqueId('react-mask-')
 
-  render () {
+  render() {
     const { path1, mask1 } = this
     return (
       <g

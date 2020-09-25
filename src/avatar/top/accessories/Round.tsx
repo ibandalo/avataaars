@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 export default class Round extends React.Component {
   static optionValue = 'Round'
@@ -7,7 +7,7 @@ export default class Round extends React.Component {
   private path1 = uniqueId('react-path-')
   private filter1 = uniqueId('react-filter-')
 
-  render () {
+  render() {
     const { path1, filter1 } = this
     return (
       <g

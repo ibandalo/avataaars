@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 export default class Wayfarers extends React.Component {
   static optionValue = 'Wayfarers'
@@ -9,7 +9,7 @@ export default class Wayfarers extends React.Component {
   private filter1 = uniqueId('react-filter-')
   private linearGradient1 = uniqueId('react-linear-gradient-')
 
-  render () {
+  render() {
     const { path1, path2, filter1, linearGradient1 } = this
     return (
       <g

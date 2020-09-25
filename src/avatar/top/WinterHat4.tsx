@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 import FacialHair from './facialHair'
 import HatColor from './HatColor'
@@ -17,7 +17,7 @@ export default class WinterHat4 extends React.Component {
   private path4 = uniqueId('react-path-')
   private path5 = uniqueId('react-path-')
 
-  render () {
+  render() {
     const {
       filter1,
       mask1,

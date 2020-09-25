@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 export default class Vomit extends React.Component {
   static optionValue = 'Vomit'
@@ -9,7 +9,7 @@ export default class Vomit extends React.Component {
   private mask1 = uniqueId('react-mask-')
   private filter1 = uniqueId('react-filter-')
 
-  render () {
+  render() {
     const { path1, path2, filter1, mask1 } = this
     return (
       <g id='Mouth/Vomit' transform='translate(2.000000, 52.000000)'>

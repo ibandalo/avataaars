@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 import Colors from './Colors'
 
@@ -9,7 +9,7 @@ export default class Hoodie extends React.Component {
   private path1 = uniqueId('react-path-')
   private mask1 = uniqueId('react-mask-')
 
-  render () {
+  render() {
     const { path1, mask1 } = this
     return (
       <g id='Clothing/Hoodie' transform='translate(0.000000, 170.000000)'>

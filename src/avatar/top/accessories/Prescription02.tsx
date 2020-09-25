@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 export default class Prescription02 extends React.Component {
   static optionValue = 'Prescription02'
 
   private filter1 = uniqueId('react-filter-')
 
-  render () {
+  render() {
     const { filter1 } = this
     return (
       <g

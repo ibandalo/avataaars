@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 import FacialHair from './facialHair'
 
@@ -10,7 +10,7 @@ export default class NoHair extends React.Component {
   private mask1 = uniqueId('react-mask-')
   private path1 = uniqueId('react-path-')
 
-  render () {
+  render() {
     const { filter1, mask1, path1 } = this
     return (
       <g id='Top' strokeWidth='1' fillRule='evenodd'>

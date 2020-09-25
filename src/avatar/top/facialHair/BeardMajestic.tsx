@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 import Colors from './Colors'
 
@@ -9,7 +9,7 @@ export default class BeardMajestic extends React.Component {
   private mask1 = uniqueId('react-mask-')
   private path1 = uniqueId('react-path-')
 
-  render () {
+  render() {
     const { mask1, path1 } = this
     return (
       <g

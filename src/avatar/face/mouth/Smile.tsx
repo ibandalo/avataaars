@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import * as uniqueId from 'lodash.uniqueid'
 
 export default class Smile extends React.Component {
   static optionValue = 'Smile'
@@ -7,7 +7,7 @@ export default class Smile extends React.Component {
   private path1 = uniqueId('react-path-')
   private mask1 = uniqueId('react-mask-')
 
-  render () {
+  render() {
     const { path1, mask1 } = this
     return (
       <g id='Mouth/Smile' transform='translate(2.000000, 52.000000)'>
